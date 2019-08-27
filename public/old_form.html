@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<!--
+Landing page based on Pratt: http://blacktie.co/demo/pratt/
+-->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Credivis - Laravel 5 package that switchs default Laravel scaffolding/boilerplate to AdminLTE template with Bootstrap 3.0 and Pratt Landing page ">
+    <meta name="author" content="Sergi Tur Badenas - acacha.org">
+
+    <meta property="og:title" content="Credivis" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Credivis - Laravel 5 package that switchs default Laravel scaffolding/boilerplate to AdminLTE template with Bootstrap 3.0 and Pratt Landing page" />
+
+    <title>Credivis Form</title>
+
+    <!-- Custom styles for this template -->
+    <link href="http://dev.credivis.com/public/css/all-landing.css" rel="stylesheet">
+
+    <link href="https://rawgit.com/guillaumepotier/Parsley.js/2.8.1/doc/assets/docs.css" rel="stylesheet">
+    <link href="https://rawgit.com/guillaumepotier/Parsley.js/2.8.1/src/parsley.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body data-spy="scroll" data-target="#navigation" data-offset="50">
+
+<div id="app" v-cloak>
+    <!-- Fixed navbar -->
+    <div id="navigation" class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><b>Credivis</b></a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#home" class="smoothScroll">Home</a></li>
+                </ul>
+                <!-- <ul class="nav navbar-nav navbar-right">
+                                            <li><a href="http://dev.credivis.com/login">Login</a></li>
+                        <li><a href="http://dev.credivis.com/register">Register</a></li>
+                                    </ul> -->
+            </div><!--/.nav-collapse -->
+        </div>
+    </div>
+<!--/.start section -->
+    <div class="col-sm-12">
+        <div class="card-box" style="margin-left: auto;margin-right: auto; max-width: 560px;">
+            <div class="bs-callout bs-callout-warning hidden">
+              <h4>Oh snap!</h4>
+              <p>This form seems to be invalid :(</p>
+            </div>
+
+            <div class="bs-callout bs-callout-info hidden">
+              <h4>Success!</h4>
+              <p>Form submitted successfully.</p>
+            </div>
+            <form method="POST" class="form-horizontal m-t-20" enctype="multipart/form-data" action="http://dev.credivis.com/save_info/information" data-parsley-validate="" id="form" >
+            <input type="hidden" value="Q9mFe64GFOIJ6r0oJnPVjFkYSWD6N9yqBrPSMZPJ" name="_token" />
+            <div class="">
+                <div class="">
+                    <div class="col-md-12">
+                        <h4 class="header-title m-t-0 m-b-30">Loan Info</h4>
+                        <div class="form-group">
+                            <label for="loan amount">Loan Amount ($)</label>
+                            <input type="text" class="form-control" name="loan_amount" data-parsley-trigger="keyup" min="1" max="100000" data-parsley-type="digits" placeholder="Up To $100,000" required="" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="loan purpose">Loan Purpose</label>
+                            <select name="loan_purpose" class="form-control" data-parsley-trigger="keyup" required="" >
+                                <option value="">Choose One...</option>
+                                <option value="Debt Consolidation">Debt Consolidation</option>
+                                <option value="Home Improvement">Home Improvement</option>
+                                <option value="Student">Student</option>
+                                <option value="Special Occasion">Special Occasion</option>
+                                <option value="Large Purchase">Large Purchase</option>
+                                <option value="Auto">Auto</option>
+                                <option value="Baby">Baby</option>
+                                <option value="Boat">Boat</option>
+                                <option value="Business">Business</option>
+                                <option value="Green Loan">Green Loan</option>
+                                <option value="Household Expenses">Household Expenses</option>
+                                <option value="Medical and Dental">Medical and Dental</option>
+                                <option value="Movind and Relocation">Movind and Relocation</option>
+                                <option value="Taxes">Taxes</option>
+                                <option value="Vacation">Vacation</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="credit score">Credit Score</label>
+                            <select name="credit_score" class="form-control" data-parsley-trigger="keyup" required="" >
+                                <option value="">Choose One...</option>
+                                <option value="Excellent (720+)">Excellent (720+)</option>
+                                <option value="Good (660-719)">Good (660-719)</option>
+                                <option value="Fair (600-659)">Fair (600-659)</option>
+                                <option value="Poor (< 600)">Poor (< 600)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <h4 class="header-title m-t-0 m-b-30">Your Info</h4>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" name="email" data-parsley-trigger="keyup" required="" type="email" data-parsley-type="email" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="date of birth">Date of birth</label>
+                            <input type="text" class="form-control" id="dob" data-inputmask="'alias': 'mm/dd/yyyy'" data-mask name="date_of_birth" data-parsley-trigger="keyup" required=""  />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="first name">First Name</label>
+                            <input type="text" class="form-control" name="first_name" data-parsley-trigger="keyup" required="" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="last name">Last Name</label>
+                            <input type="text" class="form-control" name="last_name" data-parsley-trigger="keyup" required="" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="rent or own">Do You Rent or Own?</label>
+                            <select name="rent_own" class="form-control" data-parsley-trigger="keyup"  required="" >
+                                <option value="">Choose One...</option>
+                                <option value="Rent">Rent</option>
+                                <option value="Own with Mortgage">Own with Mortgage</option>
+                                <option value="Own">Own</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="education">Highest Level of Education</label>
+                            <select name="education" class="form-control" data-parsley-trigger="keyup" required="" >
+                                <option value="">Choose One...</option>
+                                <option value="High School Diploma">High School Diploma</option>
+                                <option value="Associate's Degree">Associate's Degree</option>
+                                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                <option value="Master's Degree">Master's Degree</option>
+                                <option value="Other Graduate Degree">Other Graduate Degree</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <h4 class="header-title m-t-0 m-b-30">Contact Info</h4>
+                        <div class="form-group">
+                            <label for="zipcode">Zip Code</label>
+                            <input type="text" class="form-control" name="zip_code" maxlength="5" data-parsley-trigger="keyup" required=""  required=""  />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" name="city" data-parsley-trigger="keyup" required=""  />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" class="form-control" name="state" data-parsley-trigger="keyup" required=""  />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="street address1">Street Address 1</label>
+                            <input type="text" class="form-control" name="stree_address_1" data-parsley-trigger="keyup" placeholder="Enter address" required=""  />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="street address2">Street Address 2</label>
+                            <input type="text" class="form-control" name="street_address_2" data-parsley-trigger="keyup" placeholder="Apt, unit, etc." />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone number">Phone Number</label>
+                            <input type="text" class="form-control" name="phone_number" data-parsley-trigger="keyup" required="" data-inputmask="'mask': '(999) 999-9999'" data-mask />
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <h4 class="header-title m-t-0 m-b-30">Employment Info</h4>
+                        <div class="form-group">
+                            <label for="employment status">Employment Status</label>
+                            <select name="employment_status" class="form-control" data-parsley-trigger="keyup" required="" >
+                                <option value="">Choose One...</option>
+                                <option value="Employed">Employed</option>
+                                <option value="Military">Military</option>
+                                <option value="Not Employed">Not Employed</option>
+                                <option value="Retired">Retired</option>
+                                <option value="Self Employed">Self Employed</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="annual income">Annual Income</label>
+                            <input type="text" class="form-control" name="annual_income" data-parsley-trigger="keyup" required=""  />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pay frequency">Pay Frequency</label>
+                            <select name="pay_frequency" class="form-control" data-parsley-trigger="keyup" required="" >
+                                <option value="">Choose One...</option>
+                                <option value="Weekly">Weekly</option>
+                                <option value="BiWeekly">BiWeekly</option>
+                                <option value="Monthly">Monthly</option>
+                                <option value="Twice Monthly">Twice Monthly</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="social security">Social Security</label>
+                            <input type="text" class="form-control" name="social_security" data-parsley-trigger="keyup" required=""  data-inputmask="'mask': '999-99-9999'" data-mask />
+                        </div>
+                    </div> <!-- col end-->
+                </div><!-- row1 end-->
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <input type="checkbox" name="accept" id="check" value="1"><strong style="font-weight: normal;    font-size: 12px;    margin-left: 5px;">By checking this box, I hereby consent to the "E-Sign Agreement", the "Credit Authorization Agreement", the Terms of Service and Privacy Policy, and am providing written consent under the FCRA for Milebrook Financial. and its partners to obtain consumer report information from my credit profile. I agree to be contacted by Milebrook Financial and its partners at the telephone number(s) I have provided above to explore personal loan offers, including contact through automatic dialing systems, artificial or pre-recorded voice messaging, or text message. Consent is not required as a condition to utilize Milebrook's services, and you may choose to be contacted by an individual customer care representative(s) by calling (888) 840-0927.</strong><br>
+                    </div>
+                </div> <!-- row2 end-->
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <button type="submit" tabindex="27" id="send" class="nextButton passive-bg btn btn-primary">Get Your Offers</button>
+                        </div>
+                    </div>
+                </div><!-- row3 end-->
+
+            </div>
+            </form>
+        </div>
+    </div><!-- end section -->
+</div>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="http://dev.credivis.com/public/js/app-landing.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.8.1/parsley.min.js"></script>
+<!-- InputMask -->
+<script src="public/plugins/input-mask/jquery.inputmask.js" type="text/javascript"></script>
+<script src="public/plugins/input-mask/jquery.inputmask.date.extensions.js" type="text/javascript"></script>
+<script src="public/plugins/input-mask/jquery.inputmask.extensions.js" type="text/javascript"></script>
+<script>
+    $('.carousel').carousel({
+        interval: 3500
+    });
+    $('document').ready(function(){
+        $(function () {
+          $('#form').parsley().on('field:validated', function() {
+            var ok = $('.parsley-error').length === 0;
+            //$('.bs-callout-info').toggleClass('hidden', !ok);
+            $('.bs-callout-warning').toggleClass('hidden', ok);
+          })
+          .on('form:submit', function() {
+            //return false; // Don't submit form for this demo
+          });
+        });
+        $("[data-mask]").inputmask();
+        $("#dob").inputmask("mm/dd/yyyy", {"placeholder": "mm/dd/yyyy"});
+
+        $('#check').change(function () {
+        $('#send').prop("disabled", !this.checked);
+        }).change()
+
+    });
+</script>
+
+
+
+<style type="text/css">
+.form-horizontal .form-group {    width: 49%;    display: inline-block;margin-left: 0;margin-right: 0;}
+
+.form-control {    width: 86%;border: 0;border-radius: 3px;box-shadow: 3px 3px 10px 1px rgba(0,0,0,.2);
+                   text-align: left;font-weight: 300;-webkit-appearance: none;}
+
+label {font-family: "Raleway";font-weight: 400;color: #000;    font-size: 13px;}
+
+.header-title {    font-weight: 600;}
+@media  only screen and (max-width: 767px) {
+.form-horizontal .form-group {width: 100%;}
+}
+</style>
+</body>
+</html>

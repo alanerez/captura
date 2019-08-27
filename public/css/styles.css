@@ -1,0 +1,8 @@
+
+.modal-custom {
+    display: block !important;
+    opacity: 1 !important;
+}
+.modal-show {
+    top: 100px;
+}

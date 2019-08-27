@@ -1,0 +1,13 @@
+{
+    "name": "bostonarnold19/formbuilder",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arnold Boston",
+            "email": "bostonarnold1234567890@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+    }
+}
